@@ -10,16 +10,18 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{route('anggota.store')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('anggota.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="kode">Kode</label>
-                            <input type="text" class="form-control" id="kode" placeholder="Masukkan Kode" name="kode">
+                            <input type="text" class="form-control" id="kode" placeholder="Masukkan Kode"
+                                name="kode">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="nama">Nama</label>
-                            <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" name="nama">
+                            <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama"
+                                name="nama">
                         </div>
                     </div>
                     <div class="form-row">
@@ -44,8 +46,8 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="telpon">Telepon</label>
-                            <input type="number" class="form-control" id="telpon" placeholder="Masukkan Nomor Telepon"
-                                name="telpon">
+                            <input type="number" class="form-control" id="telpon"
+                                placeholder="Masukkan Nomor Telepon" name="telpon">
                         </div>
                     </div>
                     <div class="form-group">

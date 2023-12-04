@@ -27,7 +27,7 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'postlogin']);
 Route::get('/logout', [AuthController::class, 'logout']);
 
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
 
     // Kategori
@@ -55,7 +55,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/buku', [BukuController::class, 'index']);
     Route::get('/buku/print/{id}', [BukuController::class, 'print']);
     Route::post('/buku/store', [BukuController::class, 'store'])->name('buku.store');
-    Route::get('/anggota/edit/{id}', [AnggotaController::class, 'edit']);
-    Route::put('/anggota/edit/{id}', [AnggotaController::class, 'update']);
+    Route::get('/buku/edit/{id}', [BukuController::class, 'edit']);
+    Route::put('/buku/edit/{id}', [BukuController::class, 'update']);
     Route::get('/buku/delete/{id}', [BukuController::class, 'destroy']);
 });

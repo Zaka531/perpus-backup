@@ -8,12 +8,12 @@
     <title>Document</title>
 
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="{{asset('assets/modules/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/modules/fontawesome/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/modules/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/modules/fontawesome/css/all.min.css') }}">
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/components.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
 </head>
 
 <body>
@@ -38,8 +38,8 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="email">Email</label>
-                                        <input id="email" type="email" class="form-control" name="email" tabindex="1"
-                                            required autofocus>
+                                        <input id="email" type="email" class="form-control" name="email"
+                                            tabindex="1" required autofocus>
                                     </div>
 
                                     <div class="form-group">
@@ -69,15 +69,15 @@
     </div>
 
     <!-- General JS Scripts -->
-    <script src="{{asset('assets/modules/jquery.min.js')}}"></script>
-    <script src="{{asset('assets/modules/popper.js')}}"></script>
-    <script src="{{asset('assets/modules/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('assets/modules/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/modules/popper.js') }}"></script>
+    <script src="{{ asset('assets/modules/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="{{asset('assets/js/stisla.js')}}"></script>
+    <script src="{{ asset('assets/js/stisla.js') }}"></script>
 
     <!-- Template JS File -->
-    <script src="{{asset('assets/js/scripts.js')}}"></script>
-    <script src="{{asset('assets/js/custom.js')}}"></script>
+    <script src="{{ asset('assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
 </body>
 
 </html>

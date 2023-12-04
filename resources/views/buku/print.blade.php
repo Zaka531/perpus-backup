@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,36 +53,27 @@
             max-width: 100%;
             height: auto;
         }
-
-        .resi-sinopsis {
-            border-top: 1px solid #ddd;
-            padding-top: 20px;
-            margin-top: 20px; /* Menambahkan margin atas pada .resi-sinopsis */
-        }
     </style>
 </head>
+
 <body>
     <div class="resi-container">
         <div class="resi-header">
             <h2>Detail Buku</h2>
         </div>
         <div class="resi-details">
-            @foreach ($buku as $bk)
-            <label>Kode:</label> <span>{{$bk->kode}}</span><br>
-            <label>Judul:</label> <span>{{$bk->judul}}</span><br>
-            <label>Pengarang:</label> <span>{{$bk->pengarang}}</span><br>
-            <label>Jumlah Halaman:</label> <span>{{$bk->jumlah_halaman}}</span><br>
-            <label>Tahun Terbit:</label> <span>{{$bk->tahun_terbit}}</span><br>
-            <div class="barcode">
-                {!! DNS1D::getBarcodeHTML('$ ' .$bk->kode, 'C39+') !!}
-            </div>
-            @endforeach
-        </div>
-
-        <div class="resi-sinopsis">
-            <label>Sinopsis:</label>
-            <p>{{$bk->sinopsis}}</p>
+            @if (isset($buku))
+                <label>Kode:</label> <span>{{ $buku->kode }}</span><br>
+                <label>Judul:</label> <span>{{ $buku->judul }}</span><br>
+                <label>Pengarang:</label> <span>{{ $buku->pengarang }}</span><br>
+                <label>Jumlah Halaman:</label> <span>{{ $buku->jumlah_halaman }}</span><br>
+                <label>Tahun Terbit:</label> <span>{{ $buku->tahun_terbit }}</span><br>
+                <div class="barcode">
+                    {!! DNS1D::getBarcodeHTML('$ ' . $buku->kode, 'C39+') !!}
+                </div>
+            @endif
         </div>
     </div>
 </body>
+
 </html>
